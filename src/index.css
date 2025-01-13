@@ -1,0 +1,134 @@
+/* Reset some browser default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fc; /* Soft light background */
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Set a smooth transition for the body */
+body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Root div setup */
+#root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* White background for root */
+}
+
+/* Ensure the application stretches to full height */
+html, body, #root {
+  height: 100%;
+}
+
+/* Code Block Styling */
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-size: 0.95rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Links and Buttons */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Adding a subtle box shadow */
+header, footer, .navbar, .card {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Improve visibility of input fields */
+input, textarea {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  width: 100%;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Set a full-width container for smaller screens */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Mobile-responsive design */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
