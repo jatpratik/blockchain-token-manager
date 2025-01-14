@@ -5,27 +5,32 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import Header from "./components/Header";
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <LoginPage />, // Login page without a header
-  },
-  {
-    path: '/',
     element: (
-        <ProtectedRoute>
-        </ProtectedRoute>
-    ),
-    children: [
-      {
-        path: 'dashboard',
-        element: <DashboardPage />,
-      },
-
-    ],
+        <>
+        {/*<Header/>*/}
+        <DashboardPage />
+        </>)
   },
+  // {
+  //   path: '/',
+  //   element: (
+  //       <ProtectedRoute>
+  //       </ProtectedRoute>
+  //   ),
+  //   children: [
+  //     {
+  //       path: 'dashboard',
+  //       element: <DashboardPage />,
+  //     },
+  //
+  //   ],
+  // },
   {
     path: '*',
     element: <NotFoundPage />, // 404 page
