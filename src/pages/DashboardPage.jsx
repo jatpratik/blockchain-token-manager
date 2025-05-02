@@ -11,13 +11,18 @@ import TransferToken from "../components/TransferToken";
 import ApproveToken from "../components/ApproveToken";
 import RedeemToken from "../components/RedeemToken";
 import BurnToken from "../components/BurnToken";
+import {useAppData} from "../context/AppDataContext";
 
 const DashboardPage = () => {
     const [showPopup, setShowPopup] = useState(false);
 
+    const { userData } = useAppData();
+
     const togglePopup = () => {
         setShowPopup(!showPopup);
     };
+
+    console.log("userData",userData)
 
 
     return (
@@ -60,7 +65,7 @@ const DashboardPage = () => {
                 <RecentActivities activities={activities} />
 
             </div>
-            {showPopup && <Popup wallets={['MetaMask', 'Coinbase Wallet']} onClose={togglePopup} />}
+            {showPopup && <Popup wallets={['MetaMask', 'Phantom']} onClose={togglePopup} />}
         </div>
     );
 };

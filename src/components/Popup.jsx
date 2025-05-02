@@ -20,7 +20,8 @@ const Popup = ({ wallets, onClose }) => (
         >
             <h5>Connect a Wallet</h5>
             {wallets.map((wallet, idx) => (
-                <button key={idx} className="btn btn-outline-light w-100 mb-2">
+                <button key={idx} className="btn btn-outline-light w-100 mb-2" onClick={() => {
+                    console.log("hello") }} >
                     {wallet}
                 </button>
             ))}
